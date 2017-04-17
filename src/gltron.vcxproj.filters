@@ -1,0 +1,400 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="ソース ファイル">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="ヘッダー ファイル">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="リソース ファイル">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\base">
+      <UniqueIdentifier>{6bf11123-848f-4b1e-933b-44c0ca5d652d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\video">
+      <UniqueIdentifier>{a096c359-7a60-4690-818d-5a9fda07a520}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\input">
+      <UniqueIdentifier>{3ebd5c45-6014-443b-87ec-b4fc3c9a4ff9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\game">
+      <UniqueIdentifier>{6a1b06e4-f7c7-4d7c-80da-a00266399480}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\configuration">
+      <UniqueIdentifier>{bce5bacc-cef2-4d06-acd0-db74e9d2ab1f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\base">
+      <UniqueIdentifier>{2cf34f9d-3bb6-4e0e-95dc-7c68496d0fca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\audio">
+      <UniqueIdentifier>{39d467f6-5f36-4139-b0f8-18690160350d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\filesystem">
+      <UniqueIdentifier>{ed1e9b3e-2c14-4c64-b3e3-2608e6a70bef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\audio">
+      <UniqueIdentifier>{aaede994-6e74-49c1-8c2b-0991626401fc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\configuration">
+      <UniqueIdentifier>{90b8357d-f2a0-4c6c-85b3-f1d88a7fb9ca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\filesystem">
+      <UniqueIdentifier>{a7ffde2f-c815-483d-aca1-53fc1c4e1c41}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\game">
+      <UniqueIdentifier>{d88cd387-1b3e-4d5a-b8ae-aab3e72b148f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\input">
+      <UniqueIdentifier>{f402d608-5f1a-4057-aa5d-191a38b9d4bb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\scripting">
+      <UniqueIdentifier>{389121e5-fa0d-47e7-b755-0af59bafdf7b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\video">
+      <UniqueIdentifier>{fd8b910e-8c69-4051-a8c2-52e5af661ee0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="lua">
+      <UniqueIdentifier>{a2ea2b18-28e2-490d-8482-adedeea6814e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="lua\scripts">
+      <UniqueIdentifier>{e9e590ae-6819-4314-8d57-e2200bc67ce7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="lua\levels">
+      <UniqueIdentifier>{cc4e8a5c-1b28-4343-93a8-974735692ead}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="gltron.c">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="video\artpack.c">
+      <Filter>ソース ファイル\video</Filter>
+    </ClCompile>
+    <ClCompile Include="video\explosion.c">
+      <Filter>ソース ファイル\video</Filter>
+    </ClCompile>
+    <ClCompile Include="video\fonts.c">
+      <Filter>ソース ファイル\video</Filter>
+    </ClCompile>
+    <ClCompile Include="video\gamegraphics.c">
+      <Filter>ソース ファイル\video</Filter>
+    </ClCompile>
+    <ClCompile Include="video\graphics_fx.c">
+      <Filter>ソース ファイル\video</Filter>
+    </ClCompile>
+    <ClCompile Include="video\graphics_hud.c">
+      <Filter>ソース ファイル\video</Filter>
+    </ClCompile>
+    <ClCompile Include="video\graphics_lights.c">
+      <Filter>ソース ファイル\video</Filter>
+    </ClCompile>
+    <ClCompile Include="video\graphics_utility.c">
+      <Filter>ソース ファイル\video</Filter>
+    </ClCompile>
+    <ClCompile Include="video\graphics_world.c">
+      <Filter>ソース ファイル\video</Filter>
+    </ClCompile>
+    <ClCompile Include="video\level.c">
+      <Filter>ソース ファイル\video</Filter>
+    </ClCompile>
+    <ClCompile Include="video\material.c">
+      <Filter>ソース ファイル\video</Filter>
+    </ClCompile>
+    <ClCompile Include="video\model.c">
+      <Filter>ソース ファイル\video</Filter>
+    </ClCompile>
+    <ClCompile Include="video\recognizer.c">
+      <Filter>ソース ファイル\video</Filter>
+    </ClCompile>
+    <ClCompile Include="video\screenshot.c">
+      <Filter>ソース ファイル\video</Filter>
+    </ClCompile>
+    <ClCompile Include="video\skybox.c">
+      <Filter>ソース ファイル\video</Filter>
+    </ClCompile>
+    <ClCompile Include="video\texture.c">
+      <Filter>ソース ファイル\video</Filter>
+    </ClCompile>
+    <ClCompile Include="video\trail.c">
+      <Filter>ソース ファイル\video</Filter>
+    </ClCompile>
+    <ClCompile Include="video\trail_geometry.c">
+      <Filter>ソース ファイル\video</Filter>
+    </ClCompile>
+    <ClCompile Include="video\trail_render.c">
+      <Filter>ソース ファイル\video</Filter>
+    </ClCompile>
+    <ClCompile Include="video\video.c">
+      <Filter>ソース ファイル\video</Filter>
+    </ClCompile>
+    <ClCompile Include="video\visuals_2d.c">
+      <Filter>ソース ファイル\video</Filter>
+    </ClCompile>
+    <ClCompile Include="input\input.c">
+      <Filter>ソース ファイル\input</Filter>
+    </ClCompile>
+    <ClCompile Include="game\32bit_warning.c">
+      <Filter>ソース ファイル\game</Filter>
+    </ClCompile>
+    <ClCompile Include="game\camera.c">
+      <Filter>ソース ファイル\game</Filter>
+    </ClCompile>
+    <ClCompile Include="game\computer.c">
+      <Filter>ソース ファイル\game</Filter>
+    </ClCompile>
+    <ClCompile Include="game\computer_utilities.c">
+      <Filter>ソース ファイル\game</Filter>
+    </ClCompile>
+    <ClCompile Include="game\credits.c">
+      <Filter>ソース ファイル\game</Filter>
+    </ClCompile>
+    <ClCompile Include="game\engine.c">
+      <Filter>ソース ファイル\game</Filter>
+    </ClCompile>
+    <ClCompile Include="game\event.c">
+      <Filter>ソース ファイル\game</Filter>
+    </ClCompile>
+    <ClCompile Include="game\game.c">
+      <Filter>ソース ファイル\game</Filter>
+    </ClCompile>
+    <ClCompile Include="game\globals.c">
+      <Filter>ソース ファイル\game</Filter>
+    </ClCompile>
+    <ClCompile Include="game\gui.c">
+      <Filter>ソース ファイル\game</Filter>
+    </ClCompile>
+    <ClCompile Include="game\init.c">
+      <Filter>ソース ファイル\game</Filter>
+    </ClCompile>
+    <ClCompile Include="game\pause.c">
+      <Filter>ソース ファイル\game</Filter>
+    </ClCompile>
+    <ClCompile Include="game\resource.c">
+      <Filter>ソース ファイル\game</Filter>
+    </ClCompile>
+    <ClCompile Include="game\scripting_interface.c">
+      <Filter>ソース ファイル\game</Filter>
+    </ClCompile>
+    <ClCompile Include="game\switchCallbacks.c">
+      <Filter>ソース ファイル\game</Filter>
+    </ClCompile>
+    <ClCompile Include="game\timedemo.c">
+      <Filter>ソース ファイル\game</Filter>
+    </ClCompile>
+    <ClCompile Include="configuration\settings.c">
+      <Filter>ソース ファイル\configuration</Filter>
+    </ClCompile>
+    <ClCompile Include="base\util.c">
+      <Filter>ソース ファイル\base</Filter>
+    </ClCompile>
+    <ClCompile Include="audio\sound.c">
+      <Filter>ソース ファイル\audio</Filter>
+    </ClCompile>
+    <ClCompile Include="audio\sound_glue.cpp">
+      <Filter>ソース ファイル\audio</Filter>
+    </ClCompile>
+    <ClCompile Include="filesystem\dirsetup-win32.c">
+      <Filter>ソース ファイル\filesystem</Filter>
+    </ClCompile>
+    <ClCompile Include="filesystem\path.c">
+      <Filter>ソース ファイル\filesystem</Filter>
+    </ClCompile>
+    <ClCompile Include="game\level1.c">
+      <Filter>ソース ファイル\game</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\base\switchCallbacks.h">
+      <Filter>ヘッダー ファイル\base</Filter>
+    </ClInclude>
+    <ClInclude Include="include\base\util.h">
+      <Filter>ヘッダー ファイル\base</Filter>
+    </ClInclude>
+    <ClInclude Include="include\audio\audio.h">
+      <Filter>ヘッダー ファイル\audio</Filter>
+    </ClInclude>
+    <ClInclude Include="include\audio\sound_glue.h">
+      <Filter>ヘッダー ファイル\audio</Filter>
+    </ClInclude>
+    <ClInclude Include="include\configuration\configuration.h">
+      <Filter>ヘッダー ファイル\configuration</Filter>
+    </ClInclude>
+    <ClInclude Include="include\configuration\settings.h">
+      <Filter>ヘッダー ファイル\configuration</Filter>
+    </ClInclude>
+    <ClInclude Include="include\filesystem\dirsetup.h">
+      <Filter>ヘッダー ファイル\filesystem</Filter>
+    </ClInclude>
+    <ClInclude Include="include\filesystem\path.h">
+      <Filter>ヘッダー ファイル\filesystem</Filter>
+    </ClInclude>
+    <ClInclude Include="include\game\32bit_warning.h">
+      <Filter>ヘッダー ファイル\game</Filter>
+    </ClInclude>
+    <ClInclude Include="include\game\ai.h">
+      <Filter>ヘッダー ファイル\game</Filter>
+    </ClInclude>
+    <ClInclude Include="include\game\camera.h">
+      <Filter>ヘッダー ファイル\game</Filter>
+    </ClInclude>
+    <ClInclude Include="include\game\client_data.h">
+      <Filter>ヘッダー ファイル\game</Filter>
+    </ClInclude>
+    <ClInclude Include="include\game\data.h">
+      <Filter>ヘッダー ファイル\game</Filter>
+    </ClInclude>
+    <ClInclude Include="include\game\engine.h">
+      <Filter>ヘッダー ファイル\game</Filter>
+    </ClInclude>
+    <ClInclude Include="include\game\event.h">
+      <Filter>ヘッダー ファイル\game</Filter>
+    </ClInclude>
+    <ClInclude Include="include\game\game.h">
+      <Filter>ヘッダー ファイル\game</Filter>
+    </ClInclude>
+    <ClInclude Include="include\game\game_data.h">
+      <Filter>ヘッダー ファイル\game</Filter>
+    </ClInclude>
+    <ClInclude Include="include\game\game_level.h">
+      <Filter>ヘッダー ファイル\game</Filter>
+    </ClInclude>
+    <ClInclude Include="include\game\gltron.h">
+      <Filter>ヘッダー ファイル\game</Filter>
+    </ClInclude>
+    <ClInclude Include="include\game\init.h">
+      <Filter>ヘッダー ファイル\game</Filter>
+    </ClInclude>
+    <ClInclude Include="include\game\menu.h">
+      <Filter>ヘッダー ファイル\game</Filter>
+    </ClInclude>
+    <ClInclude Include="include\game\resource.h">
+      <Filter>ヘッダー ファイル\game</Filter>
+    </ClInclude>
+    <ClInclude Include="include\game\timedemo.h">
+      <Filter>ヘッダー ファイル\game</Filter>
+    </ClInclude>
+    <ClInclude Include="include\game\timesystem.h">
+      <Filter>ヘッダー ファイル\game</Filter>
+    </ClInclude>
+    <ClInclude Include="include\input\input.h">
+      <Filter>ヘッダー ファイル\input</Filter>
+    </ClInclude>
+    <ClInclude Include="include\scripting\scripting.h">
+      <Filter>ヘッダー ファイル\scripting</Filter>
+    </ClInclude>
+    <ClInclude Include="include\video\explosion.h">
+      <Filter>ヘッダー ファイル\video</Filter>
+    </ClInclude>
+    <ClInclude Include="include\video\graphics_fx.h">
+      <Filter>ヘッダー ファイル\video</Filter>
+    </ClInclude>
+    <ClInclude Include="include\video\graphics_hud.h">
+      <Filter>ヘッダー ファイル\video</Filter>
+    </ClInclude>
+    <ClInclude Include="include\video\graphics_lights.h">
+      <Filter>ヘッダー ファイル\video</Filter>
+    </ClInclude>
+    <ClInclude Include="include\video\graphics_utility.h">
+      <Filter>ヘッダー ファイル\video</Filter>
+    </ClInclude>
+    <ClInclude Include="include\video\graphics_world.h">
+      <Filter>ヘッダー ファイル\video</Filter>
+    </ClInclude>
+    <ClInclude Include="include\video\model.h">
+      <Filter>ヘッダー ファイル\video</Filter>
+    </ClInclude>
+    <ClInclude Include="include\video\recognizer.h">
+      <Filter>ヘッダー ファイル\video</Filter>
+    </ClInclude>
+    <ClInclude Include="include\video\skybox.h">
+      <Filter>ヘッダー ファイル\video</Filter>
+    </ClInclude>
+    <ClInclude Include="include\video\texture.h">
+      <Filter>ヘッダー ファイル\video</Filter>
+    </ClInclude>
+    <ClInclude Include="include\video\trail_geometry.h">
+      <Filter>ヘッダー ファイル\video</Filter>
+    </ClInclude>
+    <ClInclude Include="include\video\video.h">
+      <Filter>ヘッダー ファイル\video</Filter>
+    </ClInclude>
+    <ClInclude Include="include\video\video_level.h">
+      <Filter>ヘッダー ファイル\video</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\resource\gltron.rc">
+      <Filter>リソース ファイル</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\scripts\artpack.lua">
+      <Filter>lua\scripts</Filter>
+    </None>
+    <None Include="..\scripts\audio.lua">
+      <Filter>lua\scripts</Filter>
+    </None>
+    <None Include="..\scripts\basics.lua">
+      <Filter>lua\scripts</Filter>
+    </None>
+    <None Include="..\scripts\config.lua">
+      <Filter>lua\scripts</Filter>
+    </None>
+    <None Include="..\scripts\console.lua">
+      <Filter>lua\scripts</Filter>
+    </None>
+    <None Include="..\scripts\game.lua">
+      <Filter>lua\scripts</Filter>
+    </None>
+    <None Include="..\scripts\gauge.lua">
+      <Filter>lua\scripts</Filter>
+    </None>
+    <None Include="..\scripts\hud.lua">
+      <Filter>lua\scripts</Filter>
+    </None>
+    <None Include="..\scripts\hud-config.lua">
+      <Filter>lua\scripts</Filter>
+    </None>
+    <None Include="..\scripts\joystick.lua">
+      <Filter>lua\scripts</Filter>
+    </None>
+    <None Include="..\scripts\layout.lua">
+      <Filter>lua\scripts</Filter>
+    </None>
+    <None Include="..\scripts\main.lua">
+      <Filter>lua\scripts</Filter>
+    </None>
+    <None Include="..\scripts\menu.lua">
+      <Filter>lua\scripts</Filter>
+    </None>
+    <None Include="..\scripts\menu_functions.lua">
+      <Filter>lua\scripts</Filter>
+    </None>
+    <None Include="..\scripts\path.lua">
+      <Filter>lua\scripts</Filter>
+    </None>
+    <None Include="..\scripts\save.lua">
+      <Filter>lua\scripts</Filter>
+    </None>
+    <None Include="..\scripts\video.lua">
+      <Filter>lua\scripts</Filter>
+    </None>
+    <None Include="..\levels\movie.lua">
+      <Filter>lua\levels</Filter>
+    </None>
+    <None Include="..\levels\ring.lua">
+      <Filter>lua\levels</Filter>
+    </None>
+    <None Include="..\levels\square.lua">
+      <Filter>lua\levels</Filter>
+    </None>
+    <None Include="..\levels\tri.lua">
+      <Filter>lua\levels</Filter>
+    </None>
+  </ItemGroup>
+</Project>
