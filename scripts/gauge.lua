@@ -66,7 +66,7 @@ function drawSpeedAnalog(speed, circle, angles)
 	-- io.write("speed: ", speed, "\n")
 	-- for each area, draw a circle arc, with optional color
 	-- interpolation through the arc
-	for index, range in angles do
+	for index, range in pairs(angles) do
 		if(speed > range.arc_start.speed) then
 			if(speed > range.arc_end.speed) then
 				drawCircleSegment(circle, range)
@@ -100,7 +100,7 @@ function drawBar(charge, rect, ranges) -- between 0 and 1
 	-- Rectangle in pixel coordinates
 	-- for each area, draw a rectangle, with optional color
 	-- interpolation through the arc
-	for index, range in ranges do
+	for index, range in pairs(ranges) do
 		-- io.write(string.format("range: %.2f, %.2f %.2f, %.2f\n", range.range_start.charge, range.range_end.charge, range.range_start.width, range.range_end.width))
 		if(charge > range.range_start.charge) then
 			if(charge > range.range_end.charge) then

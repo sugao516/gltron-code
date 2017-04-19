@@ -273,7 +273,7 @@ void drawMenu(Visual *d) {
   scripting_Run("return Menu.current");
   scripting_CopyStringResult(pMenuName, 200);
   /* obtain some information about the active menu */
-  scripting_RunFormat("return table.getn( Menu.%s.items )", pMenuName);
+  scripting_RunFormat("return #( Menu.%s.items )", pMenuName);
   scripting_GetIntegerResult(&nEntries);
 
   /* new stuff: calculate menu dimensions */

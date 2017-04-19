@@ -36,7 +36,7 @@ end
 function getConfig(aspect)
 	best = -1
 	best_aspect = 999
-	for i = 1,table.getn(HUDConfig) do
+	for i = 1,#(HUDConfig) do
 		if(fabs(HUDConfig[i].aspect - aspect) < best_aspect) then
 			best_aspect = fabs(HUDConfig[i].aspect - aspect)
 			best = i

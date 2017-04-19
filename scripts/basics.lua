@@ -1,6 +1,7 @@
 function script_print(...)
    io.write("[script] ")
-   for i=1,arg.n do
+   local arg={select('1',...)}
+   for i=1,#arg do
       io.write(arg[i])
    end
    io.write("\n")

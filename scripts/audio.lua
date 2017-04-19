@@ -1,6 +1,6 @@
 function setupSoundTrack()
    local i,name
-   for i,name in tracks do
+   for i,name in ipairs(tracks) do
       print("[scripting audio] found track '", name, "'")
       if name == settings.current_track then
 	 current_track_index = i
@@ -12,7 +12,7 @@ function setupSoundTrack()
 end
 
 function nextTrack()
-   if current_track_index < table.getn(tracks) then
+   if current_track_index < #(tracks) then
       current_track_index = current_track_index + 1
    else
       current_track_index = 1
@@ -25,7 +25,7 @@ function previousTrack()
    if current_track_index > 1 then
       current_track_index = current_track_index - 1
    else
-      current_track_index = table.getn(tracks) 
+      current_track_index = #(tracks) 
    end
    settings.current_track = tracks[ current_track_index ]
    c_reloadTrack()
