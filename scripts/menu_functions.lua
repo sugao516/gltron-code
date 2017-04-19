@@ -29,7 +29,7 @@ GetMenuValue[ MenuC.type.list ] = function ( menu )
 
    -- script_print(menu .. " --> " .. value )
    local i
-   for i=1,table.getn(Menu[menu].values) do
+   for i=1,#(Menu[menu].values) do
       if Menu[menu].values[i] == value then return Menu[menu].labels[i] end
    end
    return "unknown (" .. value .. ")"
@@ -49,9 +49,9 @@ MenuAction[ MenuC.type.menu ] = function ( menu )
 	Menu.current = menu 
 	io.write("Menu.current is '", menu, "'"); io.flush();
 	Menu.active = 1
-	-- io.write(string.format("setting %s (%d items) as active menu\n", menu, table.getn(Menu[menu].items) ))
+	-- io.write(string.format("setting %s (%d items) as active menu\n", menu, #(Menu[menu].items) ))
 	local i
-	for i = 1,table.getn(Menu[menu].items) do
+	for i = 1,#(Menu[menu].items) do
 		-- io.write(string.format("checking %s for init-function\n", Menu[menu].items[i]))
 		if Menu[ Menu[menu].items[i] ].init then
 			Menu[ Menu[menu].items[i] ].init(Menu[menu].items[i])
@@ -80,7 +80,7 @@ end
 
 function menuListCycle(menu, offset)
 
-	local nValues = table.getn(Menu[menu].values)
+	local nValues = #(Menu[menu].values)
 	local i
 	local index
 	local value = Menu[menu].read()
@@ -143,7 +143,7 @@ end
 MenuFunctions.SetParent = function ( main, sub )
 	-- script_print("processing menu '" .. sub .. "'")
 	local _,entry
-	for _,entry in main[sub].items do
+	for _,entry in pairs(main[sub].items) do
 		if main[entry] == nil then
 			script_print("menu '" .. entry .. "' does not exist")
 		else 
@@ -158,7 +158,7 @@ end
 
 MenuFunctions.SetNames = function (menu)
 	local name,v
-	for name,v in menu do
+	for name,v in pairs(menu) do
 		if type(v) == "table" then
 			v.name = name
 		end
@@ -197,7 +197,7 @@ end
 
 
 MenuFunctions.Next = function ()
-	if Menu.active < table.getn(Menu[Menu.current].items) then
+	if Menu.active < #(Menu[Menu.current].items) then
 		Menu.active = Menu.active + 1
 	else
 		Menu.active = 1
@@ -208,6 +208,6 @@ MenuFunctions.Previous = function ()
 	if Menu.active > 1 then 
 		Menu.active = Menu.active - 1
 	else
-		Menu.active = table.getn(Menu[Menu.current].items)
+		Menu.active = #(Menu[Menu.current].items)
 	end
 end

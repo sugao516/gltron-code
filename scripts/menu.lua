@@ -458,7 +458,7 @@ MainGameMenu = {
 			-- check if matching resolution is found
 			tmp.resolution = 0
 			local i
-			local n = table.getn(Menu[menu].widths)
+			local n = #(Menu[menu].widths)
 			for i = 1,n do
 				if (settings.width == Menu[menu].widths[i]) and (settings.height == Menu[menu].heights[i]) then
 					tmp.resolution = i

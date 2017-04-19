@@ -14,7 +14,7 @@ function savevar (n,v)
    else
     io.write("{ }\n")
     v.__visited__ = n
-    for r,f in v do
+    for r,f in pairs(v) do
       if r ~= "__visited__" then
         if type(r) == 'string' then
           savevar(n.."."..r,f)
@@ -29,5 +29,6 @@ function savevar (n,v)
 end
 
 function save ()
-  table.foreach(settings,savevar)
+--  table.foreach(settings,savevar)
+	for n,v in pairs(settings) do savevar(n,v) end
 end
