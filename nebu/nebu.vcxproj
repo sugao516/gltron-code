@@ -47,7 +47,7 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>PATH_SEPARATOR=%27\\%27;_CRT_SECURE_NO_DEPRECATE;WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>$(SolutionDir);./include;../lua5/include;../glew/include;../win32/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir);./include;../lua5/include;../win32/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -63,7 +63,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>PATH_SEPARATOR=%27\\%27;_CRT_SECURE_NO_DEPRECATE;WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>$(SolutionDir);./include;../lua5/include;../glew/include;../win32/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir);./include;../lua5/include;../win32/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -164,10 +164,6 @@
     <ClInclude Include="include\video\nebu_video_utility.h" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\glew\glew.vcxproj">
-      <Project>{0af4aeb7-447f-418f-b6a1-e05f8dcc8d0f}</Project>
-      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
-    </ProjectReference>
     <ProjectReference Include="..\lua5\lua5.vcxproj">
       <Project>{38d75f90-55a2-4ba3-ab68-9a42194ec420}</Project>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
