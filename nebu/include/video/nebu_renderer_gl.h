@@ -7,7 +7,7 @@
 #include <OpenGLES/ES1/gl.h>
 #else // OPENGL_ES
 //#define GLEW_STATIC
-#include "GL/glew.h"
+#include <GL/glew.h>
 #endif // !OPENGL_ES
 
 #include <stdio.h>
