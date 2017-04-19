@@ -291,3 +291,8 @@ int main(int argc, char *argv[])
 
 	return 0;
 }
+
+nebu_Mesh * nebu_geom_CreateCylinder(float radius, float radius2, float height, int slices, int stacks)
+{
+	return NULL;
+}
