@@ -12,8 +12,6 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "lua5", "lua5\lua5.vcxproj",
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "artpack-conversion", "tools\artpack-conversion\artpack-conversion.vcxproj", "{66B22897-69D6-47A4-A450-F8DF409572B3}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "glew", "glew\glew.vcxproj", "{0AF4AEB7-447F-418F-B6A1-E05F8DCC8D0F}"
-EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "lib3ds", "lib3ds\lib3ds.vcxproj", "{3F51A83D-9D88-4D11-BE2B-2ABFC7FC5352}"
 EndProject
 Global
@@ -42,10 +40,6 @@ Global
 		{66B22897-69D6-47A4-A450-F8DF409572B3}.Debug|Win32.Build.0 = Debug|Win32
 		{66B22897-69D6-47A4-A450-F8DF409572B3}.Release|Win32.ActiveCfg = Release|Win32
 		{66B22897-69D6-47A4-A450-F8DF409572B3}.Release|Win32.Build.0 = Release|Win32
-		{0AF4AEB7-447F-418F-B6A1-E05F8DCC8D0F}.Debug|Win32.ActiveCfg = Debug|Win32
-		{0AF4AEB7-447F-418F-B6A1-E05F8DCC8D0F}.Debug|Win32.Build.0 = Debug|Win32
-		{0AF4AEB7-447F-418F-B6A1-E05F8DCC8D0F}.Release|Win32.ActiveCfg = Release|Win32
-		{0AF4AEB7-447F-418F-B6A1-E05F8DCC8D0F}.Release|Win32.Build.0 = Release|Win32
 		{3F51A83D-9D88-4D11-BE2B-2ABFC7FC5352}.Debug|Win32.ActiveCfg = Debug|Win32
 		{3F51A83D-9D88-4D11-BE2B-2ABFC7FC5352}.Debug|Win32.Build.0 = Debug|Win32
 		{3F51A83D-9D88-4D11-BE2B-2ABFC7FC5352}.Release|Win32.ActiveCfg = Release|Win32
