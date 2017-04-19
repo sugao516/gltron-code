@@ -15,12 +15,30 @@ lua_State *L;
 FILE* scripting_debug = NULL;
 extern void init_c_interface(lua_State *L);
 
+#if LUA_VERSION_NUM >= 500
+#define luaL_getn(L,t)		lua_rawlen(L, (t))
+#define lua_dofile(L,s)		luaL_dofile(L, (s))
+#define lua_dostring(L,s)	luaL_dostring(L, (s))
+#define lua_setgcthreshold(L,s)
+
+int lua_strlen(lua_State *L, int idx) {
+	size_t len;
+	const char *p = lua_tolstring(L, idx, &len);
+	return (int)len;
+}
+#endif
+
 void scripting_Init(int flags) {
+#if LUA_VERSION_NUM < 500
   L = lua_open();
   luaopen_base(L);
   luaopen_table(L);
   luaopen_string(L);
   luaopen_io(L);
+#else  // !LUA_VERSION_NUM
+  L = luaL_newstate();
+  luaL_openlibs(L);
+#endif // !LUA_VERSION_NUM
 
   if(flags | NEBU_SCRIPTING_DEBUG)
   {

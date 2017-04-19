@@ -8,8 +8,6 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "nebu", "nebu\nebu.vcxproj",
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "nebutest", "nebutest\nebutest.vcxproj", "{70BE3487-7FC7-4C0A-967D-40E9972E8E82}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "lua5", "lua5\lua5.vcxproj", "{38D75F90-55A2-4BA3-AB68-9A42194EC420}"
-EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "artpack-conversion", "tools\artpack-conversion\artpack-conversion.vcxproj", "{66B22897-69D6-47A4-A450-F8DF409572B3}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "lib3ds", "lib3ds\lib3ds.vcxproj", "{3F51A83D-9D88-4D11-BE2B-2ABFC7FC5352}"
@@ -32,10 +30,6 @@ Global
 		{70BE3487-7FC7-4C0A-967D-40E9972E8E82}.Debug|Win32.Build.0 = Debug|Win32
 		{70BE3487-7FC7-4C0A-967D-40E9972E8E82}.Release|Win32.ActiveCfg = Release|Win32
 		{70BE3487-7FC7-4C0A-967D-40E9972E8E82}.Release|Win32.Build.0 = Release|Win32
-		{38D75F90-55A2-4BA3-AB68-9A42194EC420}.Debug|Win32.ActiveCfg = Debug|Win32
-		{38D75F90-55A2-4BA3-AB68-9A42194EC420}.Debug|Win32.Build.0 = Debug|Win32
-		{38D75F90-55A2-4BA3-AB68-9A42194EC420}.Release|Win32.ActiveCfg = Release|Win32
-		{38D75F90-55A2-4BA3-AB68-9A42194EC420}.Release|Win32.Build.0 = Release|Win32
 		{66B22897-69D6-47A4-A450-F8DF409572B3}.Debug|Win32.ActiveCfg = Debug|Win32
 		{66B22897-69D6-47A4-A450-F8DF409572B3}.Debug|Win32.Build.0 = Debug|Win32
 		{66B22897-69D6-47A4-A450-F8DF409572B3}.Release|Win32.ActiveCfg = Release|Win32

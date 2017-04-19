@@ -1,3 +1,13 @@
+lua-5.3.3_Win32_dll14_lib.zip
+https://www.lua.org/
+	include/lauxlib.h
+	include/lau.h
+	include/lau.hpp
+	include/luaconf.h
+	include/lualib.h
+	lib/lua53.lib
+	dll/lua53.dll
+
 glew-2.0.0-win32.zip
 http://glew.sourceforge.net/
 	include/GL/
