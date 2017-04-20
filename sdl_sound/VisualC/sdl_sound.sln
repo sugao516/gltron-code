@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "playsound", "playsound.vcxproj", "{8E96057E-DA82-4BBC-ABE2-2C8F76A12589}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "playsound", "playsound\playsound.vcxproj", "{8E96057E-DA82-4BBC-ABE2-2C8F76A12589}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "playsound_static", "playsound_static.vcxproj", "{06D0DD73-6AAD-4EBF-A4D8-F2C1BAB00E33}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "playsound_static", "playsound_static\playsound_static.vcxproj", "{06D0DD73-6AAD-4EBF-A4D8-F2C1BAB00E33}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "sdl_sound_dll", "sdl_sound_dll.vcxproj", "{F127F6BD-2896-47E2-8659-A808F36C40FF}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "sdl_sound", "sdl_sound\sdl_sound.vcxproj", "{F127F6BD-2896-47E2-8659-A808F36C40FF}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "sdl_sound_static", "sdl_sound_static.vcxproj", "{30469547-D611-4948-97C1-3815DC6ABE42}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "sdl_sound_static", "sdl_sound_static\sdl_sound_static.vcxproj", "{30469547-D611-4948-97C1-3815DC6ABE42}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

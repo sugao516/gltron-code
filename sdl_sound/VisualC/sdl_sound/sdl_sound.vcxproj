@@ -18,6 +18,7 @@
     <SccProjectName />
     <SccLocalPath />
     <ProjectGuid>{F127F6BD-2896-47E2-8659-A808F36C40FF}</ProjectGuid>
+    <ProjectName>sdl_sound</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Template|Win32'" Label="Configuration">
