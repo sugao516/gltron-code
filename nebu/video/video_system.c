@@ -6,7 +6,30 @@
 
 #include "base/nebu_debug_memory.h"
 
+#if SDL_MAJOR_VERSION >= 2
+#define	SDL_OPENGL		SDL_WINDOW_OPENGL
+#define	SDL_FULLSCREEN	SDL_WINDOW_FULLSCREEN
+SDL_Window *screen;
+SDL_Window * SDL_SetVideoMode(int width, int height, int bpp, Uint32 flags) {
+	SDL_Window *screen =
+	SDL_CreateWindow("", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, width, height, flags);
+	if (screen != NULL) {
+		SDL_GL_CreateContext(screen);
+	}
+	return screen;
+}
+int SDLCALL SDL_SetGamma(float red, float green, float blue) {
+	//SDL_SetWindowGammaRamp(screen, red, green, blue);
+}
+void SDL_WM_SetCaption(const char *title, const char *icon) {
+	SDL_SetWindowTitle(screen, title);
+}
+void SDL_WarpMouse(Uint16 x, Uint16 y) {
+	SDL_WarpMouseInWindow(screen, x, y);
+}
+#else
 static SDL_Surface *screen;
+#endif // _SDL2_
 static int width = 0;
 static int height = 0;
 static int bitdepth = 0;

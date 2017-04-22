@@ -78,6 +78,14 @@ static const char *option_list[] =
     NULL,          NULL
 };
 
+#if SDL_MAJOR_VERSION >= 2
+SDL_version _sdl_linked;
+const SDL_version * SDL_Linked_Version(void)
+{
+	SDL_GetVersion(&_sdl_linked);
+	return(&_sdl_linked);
+}
+#endif
 
 static void output_versions(const char *argv0)
 {

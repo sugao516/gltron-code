@@ -51,15 +51,15 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>SOUND_SUPPORTS_AIFF;SOUND_SUPPORTS_AU;SOUND_SUPPORTS_FLAC;SOUND_SUPPORTS_MIDI;SOUND_SUPPORTS_MIKMOD;SOUND_SUPPORTS_MPGLIB;SOUND_SUPPORTS_OGG;SOUND_SUPPORTS_RAW;SOUND_SUPPORTS_SHN;SOUND_SUPPORTS_VOC;SOUND_SUPPORTS_WAV;_CRT_SECURE_NO_WARNINGS;WIN32;_DEBUG;_WINDOWS;_USRDLL;SDL_SOUND_DLL_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>SOUND_SUPPORTS_AIFF;SOUND_SUPPORTS_AU;SOUND_SUPPORTS_FLAC;SOUND_SUPPORTS_MIDI;SOUND_SUPPORTS_MIKMOD;SOUND_SUPPORTS_MPGLIB;SOUND_SUPPORTS_OGG;SOUND_SUPPORTS_RAW;SOUND_SUPPORTS_SHN;SOUND_SUPPORTS_VOC;SOUND_SUPPORTS_WAV;HAVE_LIBC;_CRT_SECURE_NO_WARNINGS;WIN32;_DEBUG;_WINDOWS;_USRDLL;SDL_SOUND_DLL_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>..\..;..\..\decoders\timidity;..\..\..\win32\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <SDLCheck>true</SDLCheck>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>..\..\..\win32\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>sdl.lib;libFLAC.lib;libmikmod.lib;libvorbisfile.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\..\..\win32\lib\$(Platform);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>SDL2.lib;libFLAC.lib;libmikmod.lib;libvorbisfile.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -68,7 +68,7 @@
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <PreprocessorDefinitions>SOUND_SUPPORTS_AIFF;SOUND_SUPPORTS_AU;SOUND_SUPPORTS_FLAC;SOUND_SUPPORTS_MIDI;SOUND_SUPPORTS_MIKMOD;SOUND_SUPPORTS_MPGLIB;SOUND_SUPPORTS_OGG;SOUND_SUPPORTS_RAW;SOUND_SUPPORTS_SHN;SOUND_SUPPORTS_VOC;SOUND_SUPPORTS_WAV;_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;_WINDOWS;_USRDLL;SDL_SOUND_DLL_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>SOUND_SUPPORTS_AIFF;SOUND_SUPPORTS_AU;SOUND_SUPPORTS_FLAC;SOUND_SUPPORTS_MIDI;SOUND_SUPPORTS_MIKMOD;SOUND_SUPPORTS_MPGLIB;SOUND_SUPPORTS_OGG;SOUND_SUPPORTS_RAW;SOUND_SUPPORTS_SHN;SOUND_SUPPORTS_VOC;SOUND_SUPPORTS_WAV;HAVE_LIBC;_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;_WINDOWS;_USRDLL;SDL_SOUND_DLL_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>..\..;..\..\decoders\timidity;..\..\..\win32\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <SDLCheck>true</SDLCheck>
     </ClCompile>
@@ -77,8 +77,8 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>..\..\..\win32\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>sdl.lib;libFLAC.lib;libmikmod.lib;libvorbisfile.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\..\..\win32\lib\$(Platform);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>SDL2.lib;libFLAC.lib;libmikmod.lib;libvorbisfile.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>

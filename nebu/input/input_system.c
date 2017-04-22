@@ -5,7 +5,9 @@
 #include "scripting/nebu_scripting.h"
 
 #include "base/nebu_system.h"
+#if SDL_MAJOR_VERSION < 2
 #include "SDL_getenv.h"
+#endif // _SDL2_
 #include <errno.h>
 
 #include "base/nebu_debug_memory.h"
@@ -16,6 +18,13 @@ static int mouse_y = -1;
 
 enum { eMaxKeyState = 1024 };
 static int keyState[eMaxKeyState];
+
+#if SDL_MAJOR_VERSION >= 2
+#define	SDL_WM_GrabInput	SDL_SetRelativeMouseMode
+#define	SDL_GRAB_ON			SDL_TRUE
+#define	SDL_GRAB_OFF		SDL_FALSE
+#define	SDL_EnableKeyRepeat(delay, interval)
+#endif // _SDL2_
 
 static void setKeyState(int key, int state)
 {
@@ -137,6 +146,10 @@ void SystemMouseMotion(int x, int y) {
 }
 
 const char* nebu_Input_GetKeyname(int key) {
+#if SDL_MAJOR_VERSION >= 2
+	const char *keyname = SDL_GetKeyName(key);
+	return keyname;
+#else
 	if(key < SYSTEM_CUSTOM_KEYS)
 		return SDL_GetKeyName(key);
 	else {
@@ -148,6 +161,7 @@ const char* nebu_Input_GetKeyname(int key) {
 		}
 		return "unknown custom key";
 	}
+#endif // _SDL2_
 }  
 
 void nebu_Intern_HandleInput(SDL_Event *event) {
