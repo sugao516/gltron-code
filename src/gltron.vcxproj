@@ -52,12 +52,12 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>RC_NAME="gltron.ini";PREF_DIR=".";SNAP_DIR="";DATA_DIR="";LOCAL_DATA="";SEPARATOR=%27\\%27;VERSION="0.63alpha1";_CRT_SECURE_NO_DEPRECATE;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>../src/include;../nebu/include;../win32/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../src/include;../nebu/include;../win32/include;../sdl_sound;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>lua53.lib;glew32.lib;opengl32.lib;SDLmain.lib;sdl.lib;libpng.lib;zlib.lib;sdl_sound.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>lua53.lib;glew32.lib;opengl32.lib;SDLmain.lib;sdl.lib;libpng.lib;zlib.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>../win32/lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <IgnoreSpecificDefaultLibraries>MSVCRT;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
     </Link>
@@ -72,14 +72,14 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;RC_NAME="gltron.ini";PREF_DIR=".";SNAP_DIR="";DATA_DIR="";LOCAL_DATA="";SEPARATOR=%27\\%27;VERSION="0.71-beta";SEPERATOR=%27\\%27;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>../src/include;../nebu/include;../win32/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../src/include;../nebu/include;../win32/include;../sdl_sound;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>lua53.lib;glew32.lib;opengl32.lib;SDLmain.lib;sdl.lib;libpng.lib;zlib.lib;sdl_sound.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>lua53.lib;glew32.lib;opengl32.lib;SDLmain.lib;sdl.lib;libpng.lib;zlib.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>../win32/lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <ImageHasSafeExceptionHandlers />
     </Link>
@@ -179,6 +179,9 @@
   <ItemGroup>
     <ProjectReference Include="..\nebu\nebu.vcxproj">
       <Project>{77b12e9e-0359-46ed-92f1-00740df8545f}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\sdl_sound\VisualC\sdl_sound\sdl_sound.vcxproj">
+      <Project>{f127f6bd-2896-47e2-8659-a808f36c40ff}</Project>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

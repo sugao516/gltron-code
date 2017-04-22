@@ -12,6 +12,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "artpack-conversion", "tools
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "lib3ds", "lib3ds\lib3ds.vcxproj", "{3F51A83D-9D88-4D11-BE2B-2ABFC7FC5352}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "sdl_sound", "sdl_sound\VisualC\sdl_sound\sdl_sound.vcxproj", "{F127F6BD-2896-47E2-8659-A808F36C40FF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -38,6 +40,10 @@ Global
 		{3F51A83D-9D88-4D11-BE2B-2ABFC7FC5352}.Debug|Win32.Build.0 = Debug|Win32
 		{3F51A83D-9D88-4D11-BE2B-2ABFC7FC5352}.Release|Win32.ActiveCfg = Release|Win32
 		{3F51A83D-9D88-4D11-BE2B-2ABFC7FC5352}.Release|Win32.Build.0 = Release|Win32
+		{F127F6BD-2896-47E2-8659-A808F36C40FF}.Debug|Win32.ActiveCfg = Debug|Win32
+		{F127F6BD-2896-47E2-8659-A808F36C40FF}.Debug|Win32.Build.0 = Debug|Win32
+		{F127F6BD-2896-47E2-8659-A808F36C40FF}.Release|Win32.ActiveCfg = Release|Win32
+		{F127F6BD-2896-47E2-8659-A808F36C40FF}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
