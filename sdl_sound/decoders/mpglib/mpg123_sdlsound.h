@@ -1,7 +1,7 @@
 #include        <stdio.h>
 #include        <string.h>
 
-#if !defined(WIN32) && !defined(macintosh) && !defined(_WIN32_WCE)
+#if !defined(WIN32) && !defined(_WIN64) && !defined(macintosh) && !defined(_WIN32_WCE)
 #include        <unistd.h>
 #endif
 
