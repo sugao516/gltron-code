@@ -169,6 +169,12 @@ void nebu_System_PostRedisplay() {
   redisplay = 1;
 }
 
+#if SDL_MAJOR_VERSION >= 2
+void SDL_GL_SwapBuffers() {
+	extern SDL_Window *screen;
+	SDL_GL_SwapWindow(screen);
+}
+#endif // _SDL2_
 void nebu_System_SwapBuffers() {
 	int now = nebu_Time_GetElapsed();
 	fps_dt = now - fps_last;

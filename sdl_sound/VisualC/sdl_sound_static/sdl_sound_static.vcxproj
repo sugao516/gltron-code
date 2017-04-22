@@ -44,7 +44,7 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>SOUND_SUPPORTS_AIFF;SOUND_SUPPORTS_AU;SOUND_SUPPORTS_MIDI;SOUND_SUPPORTS_MPGLIB;SOUND_SUPPORTS_RAW;SOUND_SUPPORTS_SHN;SOUND_SUPPORTS_VOC;SOUND_SUPPORTS_WAV;_CRT_SECURE_NO_WARNINGS;WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>SOUND_SUPPORTS_AIFF;SOUND_SUPPORTS_AU;SOUND_SUPPORTS_MIDI;SOUND_SUPPORTS_MPGLIB;SOUND_SUPPORTS_RAW;SOUND_SUPPORTS_SHN;SOUND_SUPPORTS_VOC;SOUND_SUPPORTS_WAV;HAVE_LIBC;_CRT_SECURE_NO_WARNINGS;WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
       <AdditionalIncludeDirectories>..\..;..\..\decoders\timidity;..\..\..\win32\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
@@ -58,7 +58,7 @@
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <PreprocessorDefinitions>SOUND_SUPPORTS_AIFF;SOUND_SUPPORTS_AU;SOUND_SUPPORTS_MIDI;SOUND_SUPPORTS_MPGLIB;SOUND_SUPPORTS_RAW;SOUND_SUPPORTS_SHN;SOUND_SUPPORTS_VOC;SOUND_SUPPORTS_WAV;_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>SOUND_SUPPORTS_AIFF;SOUND_SUPPORTS_AU;SOUND_SUPPORTS_MIDI;SOUND_SUPPORTS_MPGLIB;SOUND_SUPPORTS_RAW;SOUND_SUPPORTS_SHN;SOUND_SUPPORTS_VOC;SOUND_SUPPORTS_WAV;HAVE_LIBC;_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
       <AdditionalIncludeDirectories>..\..;..\..\decoders\timidity;..\..\..\win32\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
