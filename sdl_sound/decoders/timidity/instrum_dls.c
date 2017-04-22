@@ -1229,7 +1229,7 @@ Instrument *load_instrument_dls(MidiSong *song, int drum, int bank, int instrume
 {
   Instrument *inst;
   Uint32 i;
-  DLS_Instrument *dls_ins;
+  DLS_Instrument *dls_ins = NULL;
 
   if (!song->patches)
    return(NULL);

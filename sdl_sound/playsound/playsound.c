@@ -736,7 +736,7 @@ int main(int argc, char **argv)
     SDL_AudioSpec sdl_desired;
     Uint32 audio_buffersize;
     Uint32 decode_buffersize;
-    Sound_Sample *sample;
+    Sound_Sample *sample = NULL;
     int use_specific_audiofmt = 0;
     int i;
     int delay;

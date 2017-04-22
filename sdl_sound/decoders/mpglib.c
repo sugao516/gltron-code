@@ -144,7 +144,7 @@ static int MPGLIB_open(Sound_Sample *sample, const char *ext)
             BAIL_MACRO("MPGLIB: Not an MP3 stream.", 0);
 
             /* If the seek fails, we'll probably miss a frame, but oh well. */
-        SDL_RWseek(internal->rw, -sizeof (mp3_magic), SEEK_CUR);
+        SDL_RWseek(internal->rw, -(int)sizeof (mp3_magic), SEEK_CUR);
     } /* if */
 
     mpg = (mpglib_t *) malloc(sizeof (mpglib_t));
