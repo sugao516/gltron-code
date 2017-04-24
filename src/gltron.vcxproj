@@ -83,7 +83,7 @@
       </PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>RC_NAME="gltron.ini";PREF_DIR=".";SNAP_DIR="";DATA_DIR="";LOCAL_DATA="";SEPARATOR=%27\\%27;VERSION="0.63alpha1";_CRT_SECURE_NO_DEPRECATE;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>RC_NAME="gltron.ini";PREF_DIR=".";SNAP_DIR=".";DATA_DIR=".";LOCAL_DATA;SEPARATOR='/';VERSION="0.71-beta";_CRT_SECURE_NO_DEPRECATE;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
       <AdditionalIncludeDirectories>../src/include;../nebu/include;../win32/include;../sdl_sound;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
@@ -101,7 +101,7 @@
       </PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>RC_NAME="gltron.ini";PREF_DIR=".";SNAP_DIR="";DATA_DIR="";LOCAL_DATA="";SEPARATOR=%27\\%27;VERSION="0.63alpha1";_CRT_SECURE_NO_DEPRECATE;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>RC_NAME="gltron.ini";PREF_DIR=".";SNAP_DIR=".";DATA_DIR=".";LOCAL_DATA;SEPARATOR='/';VERSION="0.71-beta";_CRT_SECURE_NO_DEPRECATE;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
       <AdditionalIncludeDirectories>../src/include;../nebu/include;../win32/include;../sdl_sound;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
@@ -121,7 +121,7 @@
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <PreprocessorDefinitions>RC_NAME="gltron.ini";PREF_DIR=".";SNAP_DIR="";DATA_DIR="";LOCAL_DATA="";SEPARATOR=%27\\%27;VERSION="0.71-beta";_CRT_SECURE_NO_DEPRECATE;WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>RC_NAME="gltron.ini";PREF_DIR=".";SNAP_DIR=".";DATA_DIR=".";LOCAL_DATA;SEPARATOR='/';VERSION="0.71-beta";_CRT_SECURE_NO_DEPRECATE;WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
       <AdditionalIncludeDirectories>../src/include;../nebu/include;../win32/include;../sdl_sound;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
@@ -143,7 +143,7 @@
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <PreprocessorDefinitions>RC_NAME="gltron.ini";PREF_DIR=".";SNAP_DIR="";DATA_DIR="";LOCAL_DATA="";SEPARATOR=%27\\%27;VERSION="0.71-beta";_CRT_SECURE_NO_DEPRECATE;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>RC_NAME="gltron.ini";PREF_DIR=".";SNAP_DIR=".";DATA_DIR=".";LOCAL_DATA;SEPARATOR='/';VERSION="0.71-beta";_CRT_SECURE_NO_DEPRECATE;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
       <AdditionalIncludeDirectories>../src/include;../nebu/include;../win32/include;../sdl_sound;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
