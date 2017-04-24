@@ -106,7 +106,7 @@
 #endif
 
 /* The path separator (D.M.) */
-#ifdef WIN32
+#if defined(WIN32) || defined(_WIN64)
 #  define PATH_SEP '\\'
 #else
 #  define PATH_SEP '/'

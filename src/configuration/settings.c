@@ -32,7 +32,7 @@ void saveSettings(void) {
 	scripting_RunFile(script);
 	free(script);
 
-#ifdef WIN32
+#if 0
 	scripting_Run("file = io.open(\"gltron.ini\", \"w\")");
 	scripting_Run("io.output(file)");
 #else
@@ -48,6 +48,7 @@ void saveSettings(void) {
 
 	scripting_Run("save()");
 	scripting_Run("io.write \"save_completed = 1\\n\"");
+	scripting_Run("io.close(file)");
 	scripting_Run("io.output(io.stdout)"); // select stdout again
 }
 

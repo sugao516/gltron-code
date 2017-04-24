@@ -423,7 +423,7 @@ int Timidity_Init()
    *            file itself since that file should contain any other directory
    *            that needs to be added to the search path.
    */
-#ifdef WIN32
+#if defined(WIN32) || defined(_WIN64)
   add_to_pathlist("\\TIMIDITY");
 #else
   add_to_pathlist("/usr/local/lib/timidity");

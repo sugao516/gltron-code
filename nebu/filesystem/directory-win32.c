@@ -1,4 +1,4 @@
-#ifdef WIN32
+#if defined(WIN32) || defined(_WIN64)
 
 #include "base/nebu_util.h"
 

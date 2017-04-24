@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <errno.h>
 
-#if !defined(WIN32) && !defined(macintosh)
+#if !defined(WIN32) && !defined(_WIN64) && !defined(macintosh)
 #include <unistd.h>
 #endif
 
