@@ -1,5 +1,5 @@
+#                                               -*- Autoconf -*-
 # Process this file with autoconf to produce a configure script.
-AC_INIT(SDL_sound.c)
 
 # ---------------------------------------------------------------------
 # System/version info
@@ -38,23 +38,35 @@ AC_SUBST(LT_CURRENT)
 AC_SUBST(LT_REVISION)
 AC_SUBST(LT_AGE)
 
+AC_PREREQ([2.69])
+AC_INIT([SDL_sound], [1.0.3.3], [BUG-REPORT-ADDRESS])
+
 # Detect the canonical host and target build environment
-AC_CANONICAL_HOST
-AC_CANONICAL_TARGET
+#AC_CANONICAL_HOST
+#AC_CANONICAL_TARGET
 
 # Setup for automake
-AM_CONFIG_HEADER(config.h)
-AM_INIT_AUTOMAKE(SDL_sound, $VERSION)
+
+AM_INIT_AUTOMAKE([subdir-objects])
+AC_CONFIG_SRCDIR([alt_audio_convert.c])
+AC_CONFIG_HEADERS([config.h])
+AC_CONFIG_MACRO_DIRS([m4])
 
 
 # ---------------------------------------------------------------------
 # Compilers and other tools
 # ---------------------------------------------------------------------
 
+# Checks for programs.
+AC_PROG_CXX
+AC_PROG_AWK
 AC_PROG_CC
+AC_PROG_CPP
 AC_PROG_INSTALL
 AC_PROG_LN_S
-AM_PROG_LIBTOOL
+AC_PROG_MAKE_SET
+AC_PROG_RANLIB
+LT_INIT
 
 
 # ---------------------------------------------------------------------
@@ -83,12 +95,12 @@ fi
 # ---------------------------------------------------------------------
 
 # Check for SDL
-SDL_VERSION=1.2.0
-AM_PATH_SDL($SDL_VERSION,
+SDL_VERSION=2.0.1
+AM_PATH_SDL2($SDL_VERSION,
             :,
  	     AC_MSG_ERROR([*** SDL version $SDL_VERSION not found!])
 )
-CFLAGS="$CFLAGS $SDL_CFLAGS"
+CFLAGS="$CFLAGS $SDL_CFLAGS $SDL_LIBS"
 LIBS="$LIBS $SDL_LIBS"
 
 
@@ -317,31 +329,31 @@ fi
 # fi
 
 # Checks for header files.
-AC_HEADER_STDC
-AC_CHECK_HEADERS([stdlib.h string.h signal.h assert.h])
+#AC_HEADER_STDC
+AC_CHECK_HEADERS([signal.h stdint.h stdlib.h string.h unistd.h])
 
 # Checks for typedefs, structures, and compiler characteristics.
-AC_C_CONST
+#AC_C_CONST
+AC_CHECK_HEADER_STDBOOL
+AC_TYPE_INT32_T
 AC_TYPE_SIZE_T
 
 # Checks for library functions.
 
 # This is only in the bleeding edge autoconf distro...
-#AC_FUNC_MALLOC
-
-
-AC_FUNC_MEMCMP
-AC_CHECK_FUNCS([memset strrchr setbuf])
+AC_FUNC_MALLOC
+AC_FUNC_REALLOC
+#AC_FUNC_MEMCMP
+AC_CHECK_FUNCS([atexit memset pow sqrt strchr strrchr])
 
 # Add Makefile conditionals
 AM_CONDITIONAL(USE_TIMIDITY, test x$enable_midi = xyes)
 AM_CONDITIONAL(USE_MPGLIB, test x$enable_mpglib = xyes)
 AM_CONDITIONAL(USE_PHYSICSFS, test x$enable_physfs = xyes)
 
-AC_OUTPUT([
-Makefile
+AC_CONFIG_FILES([Makefile
 decoders/Makefile
-decoders/timidity/Makefile
 decoders/mpglib/Makefile
-playsound/Makefile
-])
+decoders/timidity/Makefile
+playsound/Makefile])
+AC_OUTPUT

@@ -15,6 +15,8 @@ libSDL_sound_la_SOURCES =	\
 	extra_rwops.c	\
 	extra_rwops.h
 
+ACLOCAL_AMFLAGS=-I m4
+
 if USE_TIMIDITY
 TIMIDITY_LIB = decoders/timidity/libtimidity.la
 else
