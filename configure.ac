@@ -1,23 +1,29 @@
+#                                               -*- Autoconf -*-
 # Process this file with autoconf to produce a configure script.
 
 # initialisation
-AC_INIT(src/gltron.c)
-AC_CANONICAL_HOST
-AC_CANONICAL_TARGET
-AM_INIT_AUTOMAKE(gltron, 0.71-beta-1015)
+AC_PREREQ([2.69])
+AC_INIT([gltron], [0.73-w64-mingw32], [BUG-REPORT-ADDRESS])
+#AC_CANONICAL_HOST
+#AC_CANONICAL_TARGET
+AC_CONFIG_SRCDIR([src/gltron.c])
+AC_CONFIG_HEADERS([config.h])
+AM_INIT_AUTOMAKE([subdir-objects])
 
 AC_PREFIX_DEFAULT("/usr/local")
 
 # AM_MAINTAINER_MODE
 
 # Checks for programs.
-AC_PROG_CC
 AC_PROG_CXX
+AC_PROG_CC
 AC_PROG_CPP
 AC_PROG_RANLIB
 
 # CFLAGS set-up
-CFLAGS="-DRC_NAME='\".gltronrc\"' -DPATH_SEPARATOR=\"'/'\" -DSEPARATOR=\"'/'\"" 
+#CFLAGS="-DRC_NAME='\"gltron.ini\"' -DPATH_SEPARATOR='\"\\\\\"' -DSEPARATOR='\"\\\\\"'"
+CFLAGS="-DRC_NAME='\"gltron.ini\"' -DPATH_SEPARATOR=\"'/'\" -DSEPARATOR=\"'/'\"" 
+CFLAGS="$CFLAGS -DVERSION=\\\"0.73-w64-mingw32\\\""
 # CFLAGS="-ansi -pedantic"
 # CXXFLAGS=""
 # CPPFLAGS=""
@@ -58,13 +64,14 @@ if test "x$enable_optimize" ; then
 fi
 
 # library checks
-AM_PATH_SDL(1.1.0, CFLAGS="$CFLAGS $SDL_CFLAGS"; CXXFLAGS="$CXXFLAGS $SDL_CFLAGS"; LIBS="$LIBS $SDL_LIBS",
+AM_PATH_SDL2(2.0.1, CFLAGS="$CFLAGS $SDL_CFLAGS"; CXXFLAGS="$CXXFLAGS $SDL_CFLAGS"; LIBS="$LIBS $SDL_LIBS",
 	AC_MSG_ERROR(SDL is not installed))
-AC_CHECK_LIB(GL, glBegin,, AC_MSG_ERROR(OpenGL is not installed))
-# AC_CHECK_LIB(opengl32, main,, AC_MSG_ERROR(OpenGL is not installed))
+AC_CHECK_LIB(glew32, main,, AC_MSG_ERROR(OpenGL is not installed))
+AC_CHECK_LIB(opengl32, main,, AC_MSG_ERROR(OpenGL is not installed))
 AC_CHECK_LIB(z, gzopen,, AC_MSG_ERROR(libz is not installed))
 AC_CHECK_LIB(png, png_read_info,, AC_MSG_ERROR(libpng is not installed))
 # AC_CHECK_LIB(physfs, PHYSFS_init,, AC_MSG_ERROR(physfs is not installed))
+AC_CHECK_LIB([lua], [main])
 
 # local data dir setup
 AC_ARG_ENABLE(localdata,
@@ -93,13 +100,15 @@ if test "x$use_sound" = xyes; then
 	AC_CHECK_LIB(ogg, main,, AC_MSG_WARN(ogg not found - music playback may not work correctly))
 	AC_CHECK_LIB(vorbis, main,, AC_MSG_WARN(vorbis not found - music playback may not work correctly))
 	AC_CHECK_LIB(vorbisfile, main,, AC_MSG_WARN(vorbisfile not found - music playback may not work correctly))
-	AC_CHECK_LIB(smpeg, main,, AC_MSG_WARN(smpeg not found - music playback may not work correctly))
 	AC_CHECK_LIB(mikmod, main,, AC_MSG_WARN(mikmod not found - music playback may not work correctly))
-	AC_CHECK_LIB(SDL_sound, Sound_Init,
-		LIBS="-lSDL_sound $LIBS";
-		SOUND_OBJS="sound.o sound_glue.o Source.o Source3D.o SourceMusic.o SourceSample.o SoundSystem.o SourceCopy.o SourceEngine.o",
-		AC_MSG_WARN(SDL_sound not found - disabling sound);
-		SOUND_OBJS="sound_stubs.o sound_glue_stubs.o")
+	AC_CHECK_LIB(modplug, main,, AC_MSG_WARN(modplug not found - music playback may not work correctly))
+	AC_CHECK_LIB(FLAC, main,, AC_MSG_WARN(FLAC not found - music playback may not work correctly))
+	AC_CHECK_LIB(speex, main,, AC_MSG_WARN(speex not found - music playback may not work correctly))
+#	AC_CHECK_LIB(SDL_sound, Sound_Init,
+#		LIBS="-lSDL_sound $LIBS";
+#		SOUND_OBJS="sound.o sound_glue.o Source.o Source3D.o SourceMusic.o SourceSample.o SoundSystem.o SourceCopy.o SourceEngine.o",
+#		AC_MSG_WARN(SDL_sound not found - disabling sound);
+#		SOUND_OBJS="sound_stubs.o sound_glue_stubs.o")
 	
 	AC_SUBST(SOUND_OBJS)
 else
@@ -123,8 +132,8 @@ fi
 # CXXFLAGS="$CFLAGS"
 
 # header checks
-AC_HEADER_STDC
-AC_CHECK_HEADERS(unistd.h)
+#AC_HEADER_STDC
+AC_CHECK_HEADERS([float.h limits.h stdlib.h string.h unistd.h])
 
 AC_CHECK_HEADERS(GL/gl.h, have_gl_h=true, have_gl_h=false)
 $have_gl_h || {
@@ -138,58 +147,58 @@ $have_gl_h || {
 }
 
 # Checks for typedefs, structures, and compiler characteristics.
-AC_C_CONST
+#AC_C_CONST
+AC_C_INLINE
+AC_TYPE_SIZE_T
 
 # Checks for library functions.
-AC_CHECK_FUNCS(strstr mkstemp)
+AC_FUNC_MALLOC
+AC_FUNC_REALLOC
+AC_CHECK_FUNCS([memset mkdir pow realpath sqrt strchr strerror strrchr strstr strtol])
 
 CPPFLAGS="$CPPFLAGS $CPPFLAGSA"
 
-AC_OUTPUT([Makefile \
-	lib3ds/Makefile \
-	lua5/Makefile \
-	lua5/include/Makefile \
-	lua5/lib/Makefile \
-	glew/Makefile \
-	glew/include/Makefile \
-	glew/include/GL/Makefile \
-	nebu/Makefile \
-	nebu/include/Makefile \
-	nebu/include/audio/Makefile \
-	nebu/include/base/Makefile \
-	nebu/include/filesystem/Makefile \
-	nebu/include/input/Makefile \
-	nebu/include/scripting/Makefile \
-	nebu/include/video/Makefile \
-	nebu/base/Makefile \
-	nebu/filesystem/Makefile \
-	nebu/scripting/Makefile \
-	nebu/input/Makefile \
-	nebu/video/Makefile \
-	nebu/audio/Makefile
-	src/Makefile \
-	src/include/Makefile \
-	src/include/audio/Makefile \
-	src/include/base/Makefile \
-	src/include/configuration/Makefile \
-	src/include/filesystem/Makefile \
-	src/include/game/Makefile \
-	src/include/input/Makefile \
-	src/include/scripting/Makefile \
-	src/include/video/Makefile \
-	src/base/Makefile \
-	src/filesystem/Makefile \
-	src/configuration/Makefile \
-	src/audio/Makefile \
-	src/video/Makefile \
-	src/input/Makefile \
-	src/game/Makefile \
-	art/Makefile \
-	art/default/Makefile \
-	art/classic/Makefile \
-	art/metalTron/Makefile \
-	data/Makefile \
-	music/Makefile \
-	scripts/Makefile \
-	levels/Makefile \
-	])
+AC_CONFIG_FILES([Makefile
+                 art/Makefile
+                 art/arcade_spots/Makefile
+                 art/biohazard/Makefile
+                 art/classic/Makefile
+                 art/default/Makefile
+                 art/metalTron/Makefile
+                 data/Makefile
+                 levels/Makefile
+                 music/Makefile
+                 nebu/Makefile
+                 nebu/audio/Makefile
+                 nebu/base/Makefile
+                 nebu/filesystem/Makefile
+                 nebu/include/Makefile
+                 nebu/include/audio/Makefile
+                 nebu/include/base/Makefile
+                 nebu/include/filesystem/Makefile
+                 nebu/include/input/Makefile
+                 nebu/include/scripting/Makefile
+                 nebu/include/video/Makefile
+                 nebu/input/Makefile
+                 nebu/scripting/Makefile
+                 nebu/video/Makefile
+                 scripts/Makefile
+                 src/Makefile
+                 src/audio/Makefile
+                 src/base/Makefile
+                 src/configuration/Makefile
+                 src/filesystem/Makefile
+                 src/game/Makefile
+                 src/include/Makefile
+                 src/include/audio/Makefile
+                 src/include/base/Makefile
+                 src/include/configuration/Makefile
+                 src/include/filesystem/Makefile
+                 src/include/game/Makefile
+                 src/include/input/Makefile
+                 src/include/scripting/Makefile
+                 src/include/video/Makefile
+                 src/input/Makefile
+                 src/video/Makefile])
+AC_CONFIG_SUBDIRS([sdl_sound])
+AC_OUTPUT
