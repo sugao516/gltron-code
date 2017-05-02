@@ -165,7 +165,7 @@ const char* nebu_Input_GetKeyname(int key) {
 }  
 
 void nebu_Intern_HandleInput(SDL_Event *event) {
-	char *keyname;
+	const char *keyname;
 	int key, state;
 	// int skip_axis_event = 0;
 	static int joy_axis_state[2] = { 0, 0 };

@@ -1,6 +1,7 @@
 #include "base/nebu_png_texture.h"
 
 #include <stdio.h>
+#include <string.h>
 #include <errno.h>
 
 #if !defined(WIN32) && !defined(_WIN64) && !defined(macintosh)

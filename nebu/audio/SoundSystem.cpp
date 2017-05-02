@@ -96,7 +96,7 @@ namespace Sound {
 				Source *source = (Source*) p->data;
 				if(source->IsRemovable() && !source->IsPlaying())
 				{
-					delete p->data;
+					delete (Source*) p->data;
 					nebu_List_RemoveAt(p, pPrev);
 					bCheckRemove = 1;
 					break;
