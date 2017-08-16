@@ -3,7 +3,7 @@
 
 # initialisation
 AC_PREREQ([2.69])
-AC_INIT([gltron], [0.73-w64-mingw32], [BUG-REPORT-ADDRESS])
+AC_INIT([gltron], [0.74-w64-mingw32], [BUG-REPORT-ADDRESS])
 #AC_CANONICAL_HOST
 #AC_CANONICAL_TARGET
 AC_CONFIG_SRCDIR([src/gltron.c])
