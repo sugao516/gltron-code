@@ -1,19 +1,55 @@
 /* config.h.in.  Generated from configure.ac by autoheader.  */
 
-/* Define for debug builds. */
-#undef DEBUG
+/* Define to 1 if you have the <float.h> header file. */
+#undef HAVE_FLOAT_H
 
-/* Define for debug build chattering. */
-#undef DEBUG_CHATTER
-
-/* Define to 1 if you have the `atexit' function. */
-#undef HAVE_ATEXIT
-
-/* Define to 1 if you have the <dlfcn.h> header file. */
-#undef HAVE_DLFCN_H
+/* Define to 1 if you have the <GL/gl.h> header file. */
+#undef HAVE_GL_GL_H
 
 /* Define to 1 if you have the <inttypes.h> header file. */
 #undef HAVE_INTTYPES_H
+
+/* Define to 1 if you have the `FLAC' library (-lFLAC). */
+#undef HAVE_LIBFLAC
+
+/* Define to 1 if you have the `glew32' library (-lglew32). */
+#undef HAVE_LIBGLEW32
+
+/* Define to 1 if you have the `lua' library (-llua). */
+#undef HAVE_LIBLUA
+
+/* Define to 1 if you have the `mikmod' library (-lmikmod). */
+#undef HAVE_LIBMIKMOD
+
+/* Define to 1 if you have the `modplug' library (-lmodplug). */
+#undef HAVE_LIBMODPLUG
+
+/* Define to 1 if you have the `ogg' library (-logg). */
+#undef HAVE_LIBOGG
+
+/* Define to 1 if you have the `opengl32' library (-lopengl32). */
+#undef HAVE_LIBOPENGL32
+
+/* Define to 1 if you have the `png' library (-lpng). */
+#undef HAVE_LIBPNG
+
+/* Define to 1 if you have the `smpeg' library (-lsmpeg). */
+#undef HAVE_LIBSMPEG
+
+/* Define to 1 if you have the `speex' library (-lspeex). */
+#undef HAVE_LIBSPEEX
+
+/* Define to 1 if you have the `vorbis' library (-lvorbis). */
+#undef HAVE_LIBVORBIS
+
+/* Define to 1 if you have the `vorbisfile' library (-lvorbisfile). */
+#undef HAVE_LIBVORBISFILE
+
+/* Define to 1 if you have the `z' library (-lz). */
+#undef HAVE_LIBZ
+
+/* Define to 1 if you have the <limits.h> header file. */
+#undef HAVE_LIMITS_H
 
 /* Define to 1 if your system has a GNU libc compatible `malloc' function, and
    to 0 otherwise. */
@@ -25,6 +61,9 @@
 /* Define to 1 if you have the `memset' function. */
 #undef HAVE_MEMSET
 
+/* Define to 1 if you have the `mkdir' function. */
+#undef HAVE_MKDIR
+
 /* Define to 1 if you have the `pow' function. */
 #undef HAVE_POW
 
@@ -32,8 +71,8 @@
    and to 0 otherwise. */
 #undef HAVE_REALLOC
 
-/* Define to 1 if you have the <signal.h> header file. */
-#undef HAVE_SIGNAL_H
+/* Define to 1 if you have the `realpath' function. */
+#undef HAVE_REALPATH
 
 /* Define to 1 if you have the `sqrt' function. */
 #undef HAVE_SQRT
@@ -47,6 +86,9 @@
 /* Define to 1 if you have the `strchr' function. */
 #undef HAVE_STRCHR
 
+/* Define to 1 if you have the `strerror' function. */
+#undef HAVE_STRERROR
+
 /* Define to 1 if you have the <strings.h> header file. */
 #undef HAVE_STRINGS_H
 
@@ -55,6 +97,12 @@
 
 /* Define to 1 if you have the `strrchr' function. */
 #undef HAVE_STRRCHR
+
+/* Define to 1 if you have the `strstr' function. */
+#undef HAVE_STRSTR
+
+/* Define to 1 if you have the `strtol' function. */
+#undef HAVE_STRTOL
 
 /* Define to 1 if you have the <sys/stat.h> header file. */
 #undef HAVE_SYS_STAT_H
@@ -65,14 +113,11 @@
 /* Define to 1 if you have the <unistd.h> header file. */
 #undef HAVE_UNISTD_H
 
-/* Define to 1 if the system has the type `_Bool'. */
-#undef HAVE__BOOL
+/* Define to 1 if you have the </usr/local/include/GL/gl.h> header file. */
+#undef HAVE__USR_LOCAL_INCLUDE_GL_GL_H
 
-/* Define to the sub-directory where libtool stores uninstalled libraries. */
-#undef LT_OBJDIR
-
-/* Define to disable debugging. */
-#undef NDEBUG
+/* Define to 1 if you have the </usr/X11R6/include/GL/gl.h> header file. */
+#undef HAVE__USR_X11R6_INCLUDE_GL_GL_H
 
 /* Name of package */
 #undef PACKAGE
@@ -95,63 +140,17 @@
 /* Define to the version of this package. */
 #undef PACKAGE_VERSION
 
-/* Define if modplug header is in own directory. */
-#undef SOUND_MODPLUG_IN_OWN_PATH
-
-/* Define if AIFF support is desired. */
-#undef SOUND_SUPPORTS_AIFF
-
-/* Define if AU support is desired. */
-#undef SOUND_SUPPORTS_AU
-
-/* Define if FLAC support is desired. */
-#undef SOUND_SUPPORTS_FLAC
-
-/* Define if MIDI support is desired. */
-#undef SOUND_SUPPORTS_MIDI
-
-/* Define if MIKMOD support is desired. */
-#undef SOUND_SUPPORTS_MIKMOD
-
-/* Define if MODPLUG support is desired. */
-#undef SOUND_SUPPORTS_MODPLUG
-
-/* Define if MPGLIB support is desired. */
-#undef SOUND_SUPPORTS_MPGLIB
-
-/* Define if OGG support is desired. */
-#undef SOUND_SUPPORTS_OGG
-
-/* Define if RAW support is desired. */
-#undef SOUND_SUPPORTS_RAW
-
-/* Define if SHN support is desired. */
-#undef SOUND_SUPPORTS_SHN
-
-/* Define if SMPEG support is desired. */
-#undef SOUND_SUPPORTS_SMPEG
-
-/* Define if SPEEX support is desired. */
-#undef SOUND_SUPPORTS_SPEEX
-
-/* Define if VOC support is desired. */
-#undef SOUND_SUPPORTS_VOC
-
-/* Define if WAV support is desired. */
-#undef SOUND_SUPPORTS_WAV
-
-/* Define to use alternate audio converter. */
-#undef SOUND_USE_ALTCVT
-
 /* Define to 1 if you have the ANSI C header files. */
 #undef STDC_HEADERS
 
 /* Version number of package */
 #undef VERSION
 
-/* Define to the type of a signed integer type of width exactly 32 bits if
-   such a type exists and the standard includes do not define it. */
-#undef int32_t
+/* Define to `__inline__' or `__inline' if that's what the C compiler
+   calls it, or to nothing if 'inline' is not supported under any name.  */
+#ifndef __cplusplus
+#undef inline
+#endif
 
 /* Define to rpl_malloc if the replacement function should be used. */
 #undef malloc

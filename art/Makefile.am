@@ -1,1 +1,1 @@
-SUBDIRS = default classic metalTron
+SUBDIRS = default classic metalTron arcade_spots biohazard

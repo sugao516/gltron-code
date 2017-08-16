@@ -1147,11 +1147,6 @@ AC_SUBST([am__tar])
 AC_SUBST([am__untar])
 ]) # _AM_PROG_TAR
 
-m4_include([m4/libtool.m4])
-m4_include([m4/ltoptions.m4])
-m4_include([m4/ltsugar.m4])
-m4_include([m4/ltversion.m4])
-m4_include([m4/lt~obsolete.m4])
 dnl pkg.m4 - Macros to locate and utilise pkg-config.   -*- Autoconf -*-
 dnl serial 11 (pkg-config-0.29.1)
 dnl
@@ -1631,4 +1626,3 @@ int main(int argc, char *argv[])
   rm -f conf.sdltest
 ])
 
-m4_include([acinclude.m4])
